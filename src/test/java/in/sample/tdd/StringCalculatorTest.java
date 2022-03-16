@@ -12,4 +12,9 @@ public class StringCalculatorTest {
 		assertEquals(1, StringCalculator.Add("1"));
 		assertEquals(3, StringCalculator.Add("1,2"));
 	}
+	
+	@Test
+	public void testStringCalculatorMethodScenario2() {
+		assertEquals(15, StringCalculator.Add("1,2,3,4,5"));
+	}
 }
