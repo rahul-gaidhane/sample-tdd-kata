@@ -22,5 +22,7 @@ public class StringCalculatorTest {
 	@Test
 	public void testStringCalculatorMethodScenario3() {
 		assertEquals(6, StringCalculator.Add("1\n2,3"));
+		assertEquals(54321, StringCalculator.Add("1,20\n300,4000\n50000"));
+		assertEquals(15, StringCalculator.Add("1,2\n3,4\n5"));
 	}
 }
