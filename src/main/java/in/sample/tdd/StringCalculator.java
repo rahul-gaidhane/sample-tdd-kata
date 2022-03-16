@@ -45,7 +45,7 @@ public class StringCalculator {
 		
 		newLineSep = Arrays.copyOfRange(newLineSep, 1, newLineSep.length);
 		
-		return Arrays.stream(newLineSep).collect(Collectors.joining());
+		return Arrays.stream(newLineSep).collect(Collectors.joining("\n"));
 	}
 
 	private static String getDelimiter(String numbers) {
