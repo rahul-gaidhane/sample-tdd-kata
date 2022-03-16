@@ -37,5 +37,6 @@ public class StringCalculatorTest {
 	@Test
 	public void testStringCalculatorMethodScenario5() {
 		assertThrows(Exception.class, () -> StringCalculator.Add("//;\n1;-2"));
+		assertThrows(Exception.class, () -> StringCalculator.Add("//:\n1:20\n-300:4000\n-50000"));
 	}
 }
