@@ -29,5 +29,6 @@ public class StringCalculatorTest {
 	@Test
 	public void testStringCalculatorMethodScenario4() {
 		assertEquals(3, StringCalculator.Add("//;\n1;2"));
+		assertEquals(54321, StringCalculator.Add("//:\n1:20\n300:4000\n50000"));
 	}
 }
