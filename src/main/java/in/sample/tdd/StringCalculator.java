@@ -13,8 +13,18 @@ public class StringCalculator {
 		int sum = 0;
 		
 		for(String commaSepNum : commaSepNumArr) {
-			Integer num = Integer.parseInt(commaSepNum);
-			sum += num;
+			
+			if(commaSepNum.contains("\n")) {
+				String[] newLineSepArr = commaSepNum.split("\n");
+				
+				for(String newLineNum : newLineSepArr) {
+					Integer nlNum = Integer.parseInt(newLineNum);
+					sum += nlNum;
+				}
+			} else {
+				Integer cNum = Integer.parseInt(commaSepNum);
+				sum += cNum;
+			}
 		}
 		
 		return sum;
