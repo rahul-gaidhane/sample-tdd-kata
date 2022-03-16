@@ -7,7 +7,10 @@ public class StringCalculator {
 		if(numbers.isBlank()) {
 			return 0;
 		}
-		return null;
+		
+		Integer num = Integer.parseInt(numbers);
+		
+		return num;
 	}
 
 }
