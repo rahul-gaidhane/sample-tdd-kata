@@ -1,5 +1,8 @@
 package in.sample.tdd;
 
+import java.util.Arrays;
+import java.util.stream.Collectors;
+
 public class StringCalculator {
 
 	public static Integer Add(String numbers) {
@@ -8,7 +11,14 @@ public class StringCalculator {
 			return 0;
 		}
 		
-		String[] commaSepNumArr = numbers.split(",");
+		String delim = ",";		//default delimiter
+				
+		if(numbers.startsWith("//")) {	//if has defined delimiter
+			delim = getDelimiter(numbers);
+			numbers = getOperativeString(numbers);
+		}
+		
+		String[] commaSepNumArr = numbers.split(delim);
 		
 		int sum = 0;
 		
@@ -28,6 +38,22 @@ public class StringCalculator {
 		}
 		
 		return sum;
+	}
+
+	private static String getOperativeString(String numbers) {
+		String[] newLineSep = numbers.split("\n");
+		
+		newLineSep = Arrays.copyOfRange(newLineSep, 1, newLineSep.length);
+		
+		return Arrays.stream(newLineSep).collect(Collectors.joining());
+	}
+
+	private static String getDelimiter(String numbers) {
+		String[] newLineSep = numbers.split("\n");
+		
+		String delim = newLineSep[0].replace("//", "");
+		
+		return delim;
 	}
 
 }
