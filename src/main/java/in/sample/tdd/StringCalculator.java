@@ -8,17 +8,16 @@ public class StringCalculator {
 			return 0;
 		}
 		
-		String[] numArr = numbers.split(",");
+		String[] commaSepNumArr = numbers.split(",");
 		
-		Integer num1 = Integer.parseInt(numArr[0]);
+		int sum = 0;
 		
-		Integer num2 = 0;
-		
-		if(numArr.length == 2) {
-			num2 = Integer.parseInt(numArr[1]);
+		for(String commaSepNum : commaSepNumArr) {
+			Integer num = Integer.parseInt(commaSepNum);
+			sum += num;
 		}
 		
-		return num1 + num2;
+		return sum;
 	}
 
 }
