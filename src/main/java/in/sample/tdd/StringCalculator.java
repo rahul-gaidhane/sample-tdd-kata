@@ -8,9 +8,17 @@ public class StringCalculator {
 			return 0;
 		}
 		
-		Integer num = Integer.parseInt(numbers);
+		String[] numArr = numbers.split(",");
 		
-		return num;
+		Integer num1 = Integer.parseInt(numArr[0]);
+		
+		Integer num2 = 0;
+		
+		if(numArr.length == 2) {
+			num2 = Integer.parseInt(numArr[1]);
+		}
+		
+		return num1 + num2;
 	}
 
 }
