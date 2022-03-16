@@ -16,5 +16,6 @@ public class StringCalculatorTest {
 	@Test
 	public void testStringCalculatorMethodScenario2() {
 		assertEquals(15, StringCalculator.Add("1,2,3,4,5"));
+		assertEquals(54321, StringCalculator.Add("1,20,300,4000,50000"));
 	}
 }
